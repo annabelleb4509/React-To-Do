@@ -1,8 +1,16 @@
+import './ToDoListItem.css'
 
-const ToDoListItem = () => {
+
+const ToDoListItem = ({ todo, index }) => {
     return (
-      <li>
-        To Do Item
+      <li 
+        className="ToDoListItem"
+        style={{
+            backgroundColor: index % 2 ? "lavender" : "plum"
+        }}
+      >
+        <div className="flex-ctr-ctr">{index + 1}</div>
+        {todo}
       </li>
     );
   };
